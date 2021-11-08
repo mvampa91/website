@@ -1,30 +1,71 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <transition name="header" appear>
+    <Navbar :routes="routes" />
+  </transition>
+  <Bookmark :showBookmark="showBookmark" />
+  <router-view v-slot="{ Component, route }">
+    <transition
+      name="route"
+      mode="out-in"
+      @before-enter="toggleBookmark(route)"
+      @after-enter="show = true"
+      @after-leave="show = false"
+      @before-leave="toggleBookmark(route)"
+    >
+      <component :is="Component" :show="show"> </component>
+    </transition>
+  </router-view>
+  <Footer />
 </template>
+
+<script>
+import { ref } from "@vue/reactivity";
+import Bookmark from "./components/Bookmark.vue";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+import { routes } from "./router";
+
+export default {
+  setup() {
+    const show = ref(null);
+    const showBookmark = ref(null);
+
+    const toggleBookmark = (route) => {
+      console.log(route)
+      if (route.name !== "Home") {
+        showBookmark.value = false;
+      } else {
+        showBookmark.value = true;
+      }
+    };
+
+    return { show, routes, toggleBookmark, showBookmark };
+  },
+  components: {
+    Bookmark,
+    Navbar,
+    Footer,
+  },
+};
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.root {
+  text-align: right;
+  margin: 5em auto 0;
+  width: 50em;
+  position: relative;
+  z-index: -2;
+  background-color: #eee;
+  box-shadow: 0px 5px 10px #0006;
+  min-height: calc(100vh - 5em);
 }
 </style>

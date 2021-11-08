@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #031c38;
+    background-color: #426291;
+    background-image: linear-gradient(160deg, #013553 0%, #426291 100%);
+    min-height: 100%;
+}
+
+.route-enter-from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+.route-leave-to {
+    opacity: 0;
+    transform: translateX(100px);
+}
+.route-enter-active {
+    transition: all 1s ease;
+}
+
+.route-leave-active {
+    transition: all 1s ease;
+}
+
+.header-enter-from {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+.header-enter-active {
+    transition: all 1s ease;
+}
+
+.title-enter-from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.title-enter-active {
+    transition: all 1s ease;
+}
+
+.image-enter-from {
+    opacity: 0;
+}
+.image-enter-active {
+    transition: all 1s ease;
+}
+
+.book-enter-from,
+.book-leave-to {
+    transform: translateY(800px);
+    opacity: 0;
+    box-shadow: none;
+  }
+.book-enter-active,
+.book-leave-active {
+    transition: all 1s ease;
+}
+
+.page-title {
+    margin: 1em 1em;
+}
+
+.content {
+    width: 30em;
+    margin-left: auto;
+    margin-right: 2em;
+    min-height: 100%;
+  }
+.text {
+    color: #031c38;
+    text-align: left;
+    margin: 3em 0;
+    font-size: 1.2em;
+}
+
+.nav-enter-from {
+    transform: translateX(-200px);
+}
+.nav-leave-to {
+    transform: translateX(-200px);
+}
+.nav-enter-active,
+.nav-leave-active {
+    transition: all 1s ease;
+}
