@@ -30,14 +30,10 @@ import gsap from "gsap";
 // @ is an alias to /src
 
 export default {
-  props: ["show"],
-  setup() {
+  props: ["show", "db"],
+  setup(props) {
     const showContent = ref(null);
-    const texts = ref([
-      "I am a computer science engineer with passion and experience in the front-end development world.",
-      "In the past, I've worked in both business and technical sides of the IT industry.",
-      "In my spare time I express my creativity through electronic music production and I enjoy geeking about new technologies and video games.",
-    ]);
+    const texts = ref(props.db.texts);
 
     const beforeEnter = (el) => {
       el.style.opacity = 0;

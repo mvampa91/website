@@ -7,10 +7,10 @@
       <div class="title">
         <h1>{{ title }}</h1>
         <h2>{{ subtitle }}</h2>
-        <h3>{{ from }} - {{ to }}</h3>
+        <h3 v-if="from">{{ from }} - {{ to }}</h3>
       </div>
     </div>
-    <p class="abstract">{{ abstract }}</p>
+    <p v-if="abstract" class="abstract">{{ abstract }}</p>
   </div>
 </template>
 
@@ -26,17 +26,21 @@ export default {
     "to",
     "subtitle",
     "fullMargin",
+    "vertical",
   ],
   setup(props) {
     const abstract = computed(() => {
-      return props.description.length > 160
-        ? props.description.substring(0, 160) + "..."
+      return props.description?.length > 160
+        ? props.description?.substring(0, 160) + "..."
         : props.description;
     });
 
     const cssProps = computed(() => {
       return {
         "--margin": props.fullMargin ? "0 0.5em 1em 0.5em" : "0 0 1em 0",
+        "--vertical": props.vertical ? "column" : "row",
+        "--width": props.vertical ? "100%" : "auto",
+        "--margin-picture": props.vertical ? "0" : "1em",
       };
     });
 
@@ -64,7 +68,7 @@ export default {
   height: 100px;
   border-radius: 1000px;
   padding: 5px;
-  margin: 0 1em 0 0;
+  margin: 0 var(--margin-picture) 0 0;
 }
 .title > h1 {
   font-size: 1.2em;
@@ -79,6 +83,8 @@ export default {
 .head {
   display: inline-flex;
   align-items: center;
+  flex-direction: var(--vertical);
+  width: var(--width);
 }
 .abstract {
   margin-bottom: 0;

@@ -20,6 +20,7 @@
           :src="study.src"
           :from="study.from"
           :to="study.to"
+          :subtitle="study.subtitle"
           :data-index="index"
         />
       </transition-group>
@@ -33,31 +34,12 @@ import Card from "../components/Card.vue";
 import gsap from "gsap";
 
 export default {
-  props: ["show"],
+  props: ["show", "db"],
   components: {
     Card,
   },
-  setup() {
-    const studies = ref([
-      {
-        src: "logo.png",
-        title: "Univerdity of Pavia, Pavia (Italy)",
-        description:
-          "Bachelor's Degree in Computer Engineering. - Conducted an undergraduate internship with a research activity on the application of Function Point Analysis in Agile environments, focused on the SAFe framework.",
-        from: "Oct 2010",
-        to: "Apr 2016",
-        id: 0,
-      },
-      {
-        src: "logo.png",
-        title: "Technical Institute 'G. Cardano', Pavia (Italy)",
-        description:
-          "Industrial expert crew chief spec. Industrial Computing (Abacus project).",
-        from: "2005",
-        to: "2010",
-        id: 1,
-      },
-    ]);
+  setup(props) {
+    const studies = ref(props.db.studies);
 
     const showContent = ref(null);
 

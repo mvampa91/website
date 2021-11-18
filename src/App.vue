@@ -12,7 +12,7 @@
       @after-leave="show = false"
       @before-leave="toggleBookmark(route)"
     >
-      <component :is="Component" :show="show"> </component>
+      <component :is="Component" :show="show" :db="db"> </component>
     </transition>
   </router-view>
   <Footer />
@@ -24,6 +24,7 @@ import Bookmark from "./components/Bookmark.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import { routes } from "./router";
+import db from "./store/db.json";
 
 export default {
   setup() {
@@ -31,7 +32,7 @@ export default {
     const showBookmark = ref(null);
 
     const toggleBookmark = (route) => {
-      console.log(route)
+      console.log(route);
       if (route.name !== "Home") {
         showBookmark.value = false;
       } else {
@@ -39,7 +40,7 @@ export default {
       }
     };
 
-    return { show, routes, toggleBookmark, showBookmark };
+    return { show, routes, toggleBookmark, showBookmark, db };
   },
   components: {
     Bookmark,

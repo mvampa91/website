@@ -1,0 +1,81 @@
+{
+    "studies": [
+        {
+          "src": "unipv.jpeg",
+          "title": "Univerdity of Pavia, Pavia (Italy)",
+          "description":
+            "Bachelor's Degree in Computer Engineering. - Conducted an undergraduate internship with a research activity on the application of Function Point Analysis in Agile environments, focused on the SAFe framework.",
+          "from": "Oct 2010",
+          "to": "Apr 2016",
+          "subtitle": "Bachelor's Degree",
+          "id": 0
+        },
+        {
+          "src": "logo1.gif",
+          "title": "Technical Institute 'G. Cardano', Pavia (Italy)",
+          "description":
+            "Industrial expert crew chief spec. Industrial Computing (Abacus project).",
+          "from": "2005",
+          "to": "2010",
+          "subtitle": "High School Diploma",
+          "id": 1
+        }
+      ],
+      "texts": [
+        "I am a computer science engineer with passion and experience in the front-end development world.",
+        "In the past, I've worked in both business and technical sides of the IT industry.",
+        "In my spare time I express my creativity through electronic music production and I enjoy geeking about new technologies and video games."
+      ],
+      "experiences": [
+        {
+          "src": "1519896099915.jpeg",
+          "title": "FacilityLive",
+          "description":
+            "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
+          "from": "Mar 2016",
+          "subtitle": "Frontend Developer",
+          "to": "present",
+          "id": 0
+        },
+        {
+          "src": "1625468809817.jpeg",
+          "title": "BIP Consulting",
+          "description":
+            "Function Point Counter in a major italian telco company (WindTre): - Measurement of the System Integrator productivity through the application of Function Point Analysis, using the Gartner FFPA methodology. - Data governance, negotiation and cost monitoring in the end to end process of productivity measurement.",
+          "from": "Feb 2016",
+          "subtitle": "Business Analyst",
+          "to": "Feb 20218",
+          "id": 1
+        }
+      ],
+      "contacts": [
+        {
+            "src": "logo.png",
+            "title": "Email",
+            "subtitle":
+              "marco.vampa91@gmail.com",
+            "id": 0
+        },
+        {
+            "src": "logo.png",
+            "title": "Phone",
+            "subtitle":
+              "+39 345 697 0507",
+            "id": 1
+        },
+        {
+            "src": "logo.png",
+            "title": "Address",
+            "subtitle":
+              "Via I Maggio 4/L, Giussago, Pavia (Italy)",
+            "id": 2
+        },
+        {
+            "src": "logo.png",
+            "title": "Linkedin",
+            "subtitle":
+              "https://www.linkedin.com/in/marco-vampa-36989b122/",
+            "id": 3
+        }
+      ]
+}

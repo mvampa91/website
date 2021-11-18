@@ -34,33 +34,12 @@ import Card from "../components/Card.vue";
 import gsap from "gsap";
 
 export default {
-  props: ["show"],
+  props: ["show", "db"],
   components: {
     Card,
   },
-  setup() {
-    const experiences = ref([
-      {
-        src: "1519896099915.jpeg",
-        title: "FacilityLive",
-        description:
-          "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
-        from: "Mar 2016",
-        subtitle: "Frontend Developer",
-        to: "present",
-        id: 0,
-      },
-      {
-        src: "1625468809817.jpeg",
-        title: "BIP Consulting",
-        description:
-          "Function Point Counter in a major italian telco company (WindTre): - Measurement of the System Integrator productivity through the application of Function Point Analysis, using the Gartner FFPA methodology. - Data governance, negotiation and cost monitoring in the end to end process of productivity measurement.",
-        from: "Feb 2016",
-        subtitle: "Business Analyst",
-        to: "Feb 20218",
-        id: 1,
-      },
-    ]);
+  setup(props) {
+    const experiences = ref(props.db.experiences);
     const showContent = ref(null);
 
     const beforeEnter = (el) => {
