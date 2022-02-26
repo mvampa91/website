@@ -39,22 +39,25 @@ export default {
     const show = ref(null);
     const skills = ref([
       "ReactJS",
-      "VueJS",
       "Redux",
       "Javascript ES6+",
-      "REST",
+      "VueJS",
+      "Vuex",
+      "Vuetify",
+      "AVA",
+      "Jest",
+      "TestCafè",
       "NodeJS",
-      "CSS",
       "HTML",
+      "CSS",
       "Flexbox",
       "Git",
-      "AVA",
-      "TestCafè",
       "Kubernetes",
-      "Couchbase",
+      "REST",
+      "Scrum",
+      "Kanban",
       "Jira",
-      "Jenkins",
-      "Adobe Photoshop",
+      "Jenkins"
     ]);
     const languages = ref([
       "Italian &#x1f1ee;&#x1f1f9;: Native",
@@ -78,10 +81,6 @@ export default {
   box-shadow: 0px 5px 10px #0006;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   overflow: auto;
-}
-
-.hide {
-  display: none;
 }
 
 .book-wrapper {
