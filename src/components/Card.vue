@@ -50,7 +50,6 @@ export default {
       return {
         "--margin": props.fullMargin ? "0 0.5em 1em 0.5em" : "0 0 1em 0",
         "--vertical": props.vertical ? "column" : "row",
-        "--width": props.vertical ? "100%" : "auto",
         "--margin-picture": props.vertical ? "0" : "1em",
       };
     });
@@ -101,7 +100,7 @@ export default {
   display: inline-flex;
   align-items: center;
   flex-direction: var(--vertical);
-  width: var(--width);
+  width: 100%;
 }
 .abstract {
   margin-bottom: 0;

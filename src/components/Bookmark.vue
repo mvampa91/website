@@ -72,7 +72,7 @@ export default {
 
 <style>
 .bookmark {
-  width: 250px;
+  width: 270px;
   height: 100%;
   position: absolute;
   background-color: white;
@@ -113,7 +113,7 @@ export default {
   color: #eee;
   font-size: 0.8em;
   font-weight: bold;
-  margin: 0.75em 1.5em 0 0;
+  margin: 0.75em 0.5em 0 0;
 }
 .list {
   display: flex;

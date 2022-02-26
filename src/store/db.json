@@ -22,7 +22,7 @@
         }
       ],
       "texts": [
-        "I am a computer science engineer with passion and experience in the front-end development world.",
+        "I am a computer science engineer with passion and experience in the frontend development world.",
         "In the past, I've worked in both business and technical sides of the IT industry.",
         "In my spare time I express my creativity through electronic music production and I enjoy geeking about new technologies and video games."
       ],
@@ -31,7 +31,7 @@
           "src": "1512887861233723.png",
           "title": "SORINT.lab",
           "description":
-            "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
+            "Member of the Frontend team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack frontend framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
           "from": "Nov 2021",
           "subtitle": "Frontend Developer Expert",
           "to": "present",
@@ -41,7 +41,7 @@
           "src": "1519896099915.jpeg",
           "title": "FacilityLive",
           "description":
-            "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
+            "Member of the Frontend team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack frontend framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
           "from": "Mar 2018",
           "subtitle": "Frontend Developer",
           "to": "Nov 2021",
