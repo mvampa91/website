@@ -80,6 +80,10 @@ export default {
   overflow: auto;
 }
 
+.hide {
+  display: none;
+}
+
 .book-wrapper {
   margin: auto;
   width: 50em;

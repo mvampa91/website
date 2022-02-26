@@ -16,9 +16,10 @@
           v-for="(contact, index) in contacts"
           :key="contact.id"
           :title="contact.title"
+          :type="contact.type"
           :description="contact.description"
           :subtitle="contact.subtitle"
-          :src="contact.src"
+          :emoji="contact.emoji"
           :from="contact.from"
           :to="contact.to"
           :data-index="index"
@@ -76,6 +77,6 @@ export default {
 }
 .text {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 </style>

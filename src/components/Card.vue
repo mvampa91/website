@@ -1,13 +1,19 @@
 <template>
   <div class="card" :style="cssProps">
     <div class="head">
-      <div class="container">
+      <div v-if="src" class="container">
         <img :src="require('../assets/' + src)" :alt="title" class="logo" />
       </div>
-      <div class="title">
+      <template v-if="emoji">
+        <h1 style="margin: 0;" v-html="emoji" />
+      </template>
+      <div :class="{ title: true, 'align-center': emoji }">
         <h1>{{ title }}</h1>
         <h2>{{ subtitle }}</h2>
         <h3 v-if="from">{{ from }} - {{ to }}</h3>
+      </div>
+      <div v-if="expand" class="expand">
+        <button>Show More</button>
       </div>
     </div>
     <p v-if="abstract" class="abstract">{{ abstract }}</p>
@@ -15,12 +21,15 @@
 </template>
 
 <script>
-import { computed } from "@vue/reactivity";
+import { ref, computed } from "@vue/reactivity";
 export default {
   props: [
     "title",
+    "type",
     "description",
     "src",
+    "emoji",
+    "expand",
     "alt",
     "from",
     "to",
@@ -29,6 +38,8 @@ export default {
     "vertical",
   ],
   setup(props) {
+    const expanded = ref(false);
+
     const abstract = computed(() => {
       return props.description?.length > 160
         ? props.description?.substring(0, 160) + "..."
@@ -44,7 +55,7 @@ export default {
       };
     });
 
-    return { abstract, cssProps };
+    return { abstract, cssProps, expanded };
   },
 };
 </script>
@@ -70,13 +81,19 @@ export default {
   padding: 5px;
   margin: 0 var(--margin-picture) 0 0;
 }
-.title > h1 {
+.align-center {
+  text-align: center;
+}
+.title {
+  width: 100%;
+}
+.title h1 {
   font-size: 1.2em;
 }
-.title > h2 {
+.title h2 {
   font-size: 1em;
 }
-.title > h3 {
+.title h3 {
   font-size: 0.9em;
   font-weight: normal;
 }

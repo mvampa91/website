@@ -28,14 +28,24 @@
       ],
       "experiences": [
         {
+          "src": "1512887861233723.png",
+          "title": "SORINT.lab",
+          "description":
+            "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
+          "from": "Nov 2021",
+          "subtitle": "Frontend Developer Expert",
+          "to": "present",
+          "id": 0
+        },
+        {
           "src": "1519896099915.jpeg",
           "title": "FacilityLive",
           "description":
             "Member of the Front-end team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. - Evolutive maintenance of the ReactJS/Redux/NodeJS stack front-end framework, organised in a 500+ npm modules repository. - Development of the browser testing framework, based on TestCafè. - Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions.",
-          "from": "Mar 2016",
+          "from": "Mar 2018",
           "subtitle": "Frontend Developer",
-          "to": "present",
-          "id": 0
+          "to": "Nov 2021",
+          "id": 1
         },
         {
           "src": "1625468809817.jpeg",
@@ -45,37 +55,32 @@
           "from": "Feb 2016",
           "subtitle": "Business Analyst",
           "to": "Feb 20218",
-          "id": 1
+          "id": 2
         }
       ],
       "contacts": [
         {
-            "src": "logo.png",
-            "title": "Email",
+            "emoji": "&#128236;",
+            "title": "Inbox",
+            "type": "email",
             "subtitle":
               "marco.vampa91@gmail.com",
             "id": 0
         },
         {
-            "src": "logo.png",
+            "emoji": "&#9742;&#65039;",
             "title": "Phone",
+            "type": "tel",
             "subtitle":
               "+39 345 697 0507",
             "id": 1
         },
         {
-            "src": "logo.png",
+            "emoji": "&#128205;",
             "title": "Address",
             "subtitle":
               "Via I Maggio 4/L, Giussago, Pavia (Italy)",
             "id": 2
-        },
-        {
-            "src": "logo.png",
-            "title": "Linkedin",
-            "subtitle":
-              "https://www.linkedin.com/in/marco-vampa-36989b122/",
-            "id": 3
         }
       ]
 }

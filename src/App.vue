@@ -32,7 +32,6 @@ export default {
     const showBookmark = ref(null);
 
     const toggleBookmark = (route) => {
-      console.log(route);
       if (route.name !== "Home") {
         showBookmark.value = false;
       } else {
