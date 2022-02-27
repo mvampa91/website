@@ -35,9 +35,9 @@ import { ref } from "@vue/reactivity";
 
 export default {
   props: ["showBookmark", "display"],
-  setup() {
+  setup(props) {
     const show = ref(null);
-    const hide = ref(null);
+    const hide = ref(!props.display);
     const skills = ref([
       "ReactJS",
       "Redux",
@@ -89,6 +89,7 @@ export default {
   width: 50em;
   position: fixed;
   height: calc(100% - 5em);
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;

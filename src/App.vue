@@ -63,7 +63,7 @@ export default {
   margin: 5em auto 0;
   width: 50em;
   position: relative;
-  z-index: -2;
+  z-index: 0;
   background-color: #eee;
   box-shadow: 0px 5px 10px #0006;
   min-height: calc(100vh - 5em);

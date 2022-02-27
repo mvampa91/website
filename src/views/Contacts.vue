@@ -17,14 +17,12 @@
           :key="contact.id"
           :title="contact.title"
           :type="contact.type"
-          :description="contact.description"
-          :subtitle="contact.subtitle"
+          :description="contact.subtitle"
           :emoji="contact.emoji"
           :from="contact.from"
           :to="contact.to"
           :data-index="index"
-          fullMargin="true"
-          vertical="true"
+          expand="true"
         />
       </transition-group>
     </div>
