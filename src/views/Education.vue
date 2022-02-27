@@ -22,6 +22,7 @@
           :to="study.to"
           :subtitle="study.subtitle"
           :data-index="index"
+          expand="true"
         />
       </transition-group>
     </div>

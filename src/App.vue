@@ -2,8 +2,8 @@
   <transition name="header" appear>
     <Navbar :routes="routes" />
   </transition>
-  <Bookmark :showBookmark="showBookmark" />
   <router-view v-slot="{ Component, route }">
+    <Bookmark :display="route.name === 'Home'" :showBookmark="showBookmark" />
     <transition
       name="route"
       mode="out-in"

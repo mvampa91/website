@@ -1,6 +1,6 @@
 <template>
-  <div class="book-wrapper">
-    <transition name="book" appear @after-enter="show = true">
+  <div v-if="!hide || display" class="book-wrapper">
+    <transition name="book" appear @before-enter="hide = false" @after-enter="show = true" @after-leave="hide = true">
       <div v-if="showBookmark" class="bookmark">
         <transition-group name="image">
           <img
@@ -34,9 +34,10 @@
 import { ref } from "@vue/reactivity";
 
 export default {
-  props: ["showBookmark"],
+  props: ["showBookmark", "display"],
   setup() {
     const show = ref(null);
+    const hide = ref(null);
     const skills = ref([
       "ReactJS",
       "Redux",
@@ -65,7 +66,7 @@ export default {
       "Korean &#127472;&#127479;: Basic",
     ]);
 
-    return { show, skills, languages };
+    return { show, skills, languages, hide };
   },
 };
 </script>
@@ -97,6 +98,10 @@ export default {
   width: 150px;
   border-radius: 100%;
   margin: 2.5em 0 1.5em;
+}
+
+.hide {
+  display: none;
 }
 
 .skills > h2 {

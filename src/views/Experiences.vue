@@ -16,6 +16,7 @@
           v-for="(exp, index) in experiences"
           :key="exp.id"
           :title="exp.title"
+          :description="exp.description"
           :src="exp.src"
           :subtitle="exp.subtitle"
           :from="exp.from"

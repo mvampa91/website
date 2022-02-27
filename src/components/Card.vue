@@ -13,10 +13,10 @@
         <h3 v-if="from">{{ from }} - {{ to }}</h3>
       </div>
       <div v-if="expand" class="expand">
-        <button>Show More</button>
+        <button v-on:click="expanded = !expanded">Show More</button>
       </div>
     </div>
-    <p v-if="abstract" class="abstract">{{ abstract }}</p>
+    <p v-if="abstract && !(expand && !expanded)" class="abstract">{{ abstract }}</p>
   </div>
 </template>
 
