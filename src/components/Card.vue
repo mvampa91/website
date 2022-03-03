@@ -71,11 +71,11 @@ export default {
 
     const abstract = computed(() => {
       switch (props.type) {
-        case 'email':
+        case "email":
           return `<a class="link align-center" href="mailto:${props.description}">${props.description}</a>`;
-        case 'tel':
+        case "tel":
           return `<a class="link align-center" href="tel:${props.description}">${props.description}</a>`;
-      
+
         default:
           return props.description;
       }
