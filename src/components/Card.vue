@@ -70,7 +70,15 @@ export default {
     const expanded = ref(false);
 
     const abstract = computed(() => {
-      return props.description;
+      switch (props.type) {
+        case 'email':
+          return `<a class="link align-center" href="mailto:${props.description}">${props.description}</a>`;
+        case 'tel':
+          return `<a class="link align-center" href="tel:${props.description}">${props.description}</a>`;
+      
+        default:
+          return props.description;
+      }
     });
 
     const cssProps = computed(() => {
@@ -126,7 +134,16 @@ export default {
   padding: 1em;
 }
 .align-center {
+  display: block;
   text-align: center;
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.link:hover {
+  color: #326ce9;
 }
 .title {
   width: 100%;
