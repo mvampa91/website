@@ -3,9 +3,14 @@
     <div class="body">
       <div class="head">
         <div class="container">
-          <img v-if="src" :src="require('../assets/' + src)" :alt="title" class="logo" />
+          <img
+            v-if="src"
+            :src="require('../assets/' + src)"
+            :alt="title"
+            class="logo"
+          />
           <template v-if="emoji">
-            <h1 style="margin: 0;" v-html="emoji" />
+            <h1 style="margin: 0" v-html="emoji" />
           </template>
         </div>
         <div :class="{ title: true }">
@@ -65,7 +70,7 @@ export default {
     const expanded = ref(false);
 
     const abstract = computed(() => {
-      return props.description
+      return props.description;
     });
 
     const cssProps = computed(() => {
@@ -77,8 +82,8 @@ export default {
     });
 
     const handleClick = () => {
-      console.log('click')
-    }
+      console.log("click");
+    };
 
     return { abstract, cssProps, expanded, handleClick };
   },
@@ -94,7 +99,8 @@ export default {
   box-shadow: 0 5px 5px #ddd;
   margin: var(--margin);
 }
-.container img, .container h1 {
+.container img,
+.container h1 {
   width: 100px;
   height: 100px;
   border-radius: 1000px;
@@ -146,7 +152,7 @@ export default {
 }
 .expand-button__svg {
   width: 1em;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
   transform: rotate(0);
 }
 .rotate-180 {
@@ -158,13 +164,13 @@ export default {
 }
 .abstract-enter-from,
 .abstract-leave-to {
-    margin-top: -50%;
-    opacity: 0;
+  margin-top: -50%;
+  opacity: 0;
 }
 .abstract-enter-active {
-    transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .abstract-leave-active {
-    transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 </style>

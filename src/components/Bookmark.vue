@@ -1,6 +1,12 @@
 <template>
   <div v-if="!hide || display" class="book-wrapper">
-    <transition name="book" appear @before-enter="hide = false" @after-enter="show = true" @after-leave="hide = true">
+    <transition
+      name="book"
+      appear
+      @before-enter="hide = false"
+      @after-enter="show = true"
+      @after-leave="hide = true"
+    >
       <div v-if="showBookmark" class="bookmark">
         <transition-group name="image">
           <img
@@ -58,7 +64,7 @@ export default {
       "Scrum",
       "Kanban",
       "Jira",
-      "Jenkins"
+      "Jenkins",
     ]);
     const languages = ref([
       "Italian &#x1f1ee;&#x1f1f9;: Native",
