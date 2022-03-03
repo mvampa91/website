@@ -1,6 +1,6 @@
 <template>
-  <div class="root">
-    <div class="content">
+  <div :class="'root ' + grid">
+    <div :class="'content ' + grid">
       <transition name="title" @after-enter="showContent = true">
         <h1 v-if="show" class="page-title">Education</h1>
       </transition>
@@ -8,7 +8,7 @@
         appear
         v-if="showContent"
         tag="div"
-        class="text"
+        :class="'text ' + grid"
         @before-enter="beforeEnter"
         @enter="enter"
       >
@@ -35,7 +35,7 @@ import Card from "../components/Card.vue";
 import gsap from "gsap";
 
 export default {
-  props: ["show", "db"],
+  props: ["show", "db", "grid"],
   components: {
     Card,
   },

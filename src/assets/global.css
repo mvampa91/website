@@ -69,12 +69,6 @@ body {
     margin: 1em 1em;
 }
 
-.content {
-    width: 29em;
-    margin-left: auto;
-    margin-right: 2em;
-    min-height: 100%;
-  }
 .text {
     color: #031c38;
     text-align: left;
@@ -92,3 +86,58 @@ body {
 .nav-leave-active {
     transition: all 1s ease;
 }
+
+.root.xs {
+    width: 100% !important;
+}
+.root.lg {
+    width: 50em !important;
+}
+
+.xs {
+    font-size: 0.9em;
+}
+.lg {
+    font-size: 1em;
+}
+
+.content.xs {
+    width: 100% !important;
+}
+.content.lg {
+    width: 45em !important;
+}
+
+.text.xs {
+    margin: 0 3em !important;
+}
+.text.lg {
+    margin: 0 !important;
+}
+
+.nav.xs {
+    justify-content: center !important;
+    font-size: 0.8em;
+}
+.nav.lg {
+    justify-content: flex-end !important;
+    font-size: 1em;
+}
+
+.book-wrapper.xs {
+    display: none !important;
+}
+.book-wrapper.md {
+    display: block !important;
+}
+
+.content.home.md {
+    width: 29em !important;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: 2em;
+    min-height: 100%;
+  }
+  .content.home.lg {
+    font-size: 1em;
+  }

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" :class="'nav ' + grid">
     <router-link
       v-for="route in routes"
       :key="route.path"
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ["routes"],
+  props: ["routes", "grid"],
 };
 </script>
 

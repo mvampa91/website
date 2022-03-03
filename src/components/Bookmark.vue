@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!hide || display" class="book-wrapper">
+  <div v-if="!hide || display" :class="'book-wrapper ' + grid">
     <transition
       name="book"
       appear
@@ -40,7 +40,7 @@
 import { ref } from "@vue/reactivity";
 
 export default {
-  props: ["showBookmark", "display"],
+  props: ["showBookmark", "display", "grid"],
   setup(props) {
     const show = ref(null);
     const hide = ref(!props.display);

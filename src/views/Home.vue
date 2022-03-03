@@ -1,6 +1,6 @@
 <template>
-  <div class="root">
-    <div class="content">
+  <div :class="'root ' + grid">
+    <div :class="'content home ' + grid">
       <transition name="title" @after-enter="showContent = true">
         <h1 v-if="show" class="page-title">
           &#128075; Hello there, <br />
@@ -11,7 +11,7 @@
         appear
         v-if="showContent"
         tag="div"
-        class="text"
+        :class="'text ' + grid"
         @before-enter="beforeEnter"
         @enter="enter"
       >
@@ -30,7 +30,7 @@ import gsap from "gsap";
 // @ is an alias to /src
 
 export default {
-  props: ["show", "db"],
+  props: ["show", "db", "grid"],
   setup(props) {
     const showContent = ref(null);
     const texts = ref(props.db.texts);
