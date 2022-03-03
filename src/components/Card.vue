@@ -165,6 +165,6 @@ export default {
     transition: all .5s ease;
 }
 .abstract-leave-active {
-    transition: all .5s ease;
+    transition: all .5s ease-in;
 }
 </style>
