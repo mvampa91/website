@@ -1,5 +1,5 @@
 <template>
-  <div style="display: inherit">
+  <div>
     <div v-if="grid.includes('md')" id="nav" :class="'nav ' + grid">
       <router-link
         v-for="route in routes"
@@ -18,7 +18,7 @@
       v-if="!grid.includes('md')"
       :class="'nav mobile ' + grid + (expanded ? ' shadow' : '')"
     >
-      <span style="margin: 0" @click="expanded = !expanded">
+      <span v-if="display" style="margin: 0; justify-self: start">
         <svg
           class="svg-icon"
           viewBox="0 0 20 20"
@@ -33,7 +33,10 @@
         </svg>
       </span>
       <transition name="nav">
-        <span style="margin: 0" @click="expanded = !expanded">
+        <span
+          style="margin: 0; grid-column-start: 2; grid-column-end: 2"
+          @click="expanded = !expanded"
+        >
           <svg
             :class="{
               'rotate-90': expanded,
@@ -51,7 +54,7 @@
         </span>
       </transition>
       <transition name="slide-top" appear>
-        <div v-if="expanded">
+        <div v-if="expanded" class="mobile-menu">
           <router-link
             v-for="route in routes"
             :key="route.path"
@@ -73,7 +76,7 @@
 <script>
 import { ref } from "@vue/reactivity";
 export default {
-  props: ["routes", "grid"],
+  props: ["routes", "grid", "display"],
   setup() {
     const expanded = ref(false);
 
@@ -84,7 +87,7 @@ export default {
 
 <style>
 #nav {
-  padding: 1.5em 1.5em 1em 1.5em;
+  padding: 1.2em;
   text-align: end;
   text-transform: uppercase;
   background-color: #eee;
@@ -148,5 +151,13 @@ span {
 }
 .shadow {
   box-shadow: -2px -3px 17px 6px grey;
+}
+.mobile-menu {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 </style>

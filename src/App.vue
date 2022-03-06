@@ -1,6 +1,6 @@
 <template>
   <transition name="header" appear>
-    <Navbar :routes="routes" :grid="grid" />
+    <Navbar :routes="routes" :grid="grid" :display="showBookmark" />
   </transition>
   <router-view v-slot="{ Component, route }">
     <Bookmark
@@ -20,7 +20,7 @@
       </component>
     </transition>
   </router-view>
-  <Footer />
+  <Footer :grid="grid" />
 </template>
 
 <script>

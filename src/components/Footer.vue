@@ -1,5 +1,5 @@
 <template>
-  <div class="foot">
+  <div :class="'foot ' + grid">
     <transition name="footer" appear>
       <p>Made with &#10084;&#65039; by Marco Vampa</p>
     </transition>
@@ -7,7 +7,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["grid"],
+};
 </script>
 
 <style scoped>
@@ -36,5 +38,13 @@ export default {};
 }
 .footer-enter-active {
   transition: all 1s ease;
+}
+.foot.xs {
+  font-size: 0.7em;
+  justify-content: center;
+}
+.foot.md {
+  font-size: 1em;
+  justify-content: flex-end;
 }
 </style>

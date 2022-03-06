@@ -15,6 +15,18 @@ body {
     min-height: 100%;
 }
 
+.root.xs {
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    height: calc(100% - 5em);
+    bottom: 0;
+}
+.root.lg {
+    position: relative;
+    width: 50em;
+}
+
 .route-enter-from {
     opacity: 0;
     transform: translateX(-100px);
@@ -25,10 +37,12 @@ body {
 }
 .route-enter-active {
     transition: all 1s ease;
+    position: fixed;
 }
 
 .route-leave-active {
     transition: all 1s ease;
+    position: fixed;
 }
 
 .header-enter-from {
@@ -87,23 +101,26 @@ body {
     transition: all 1s ease;
 }
 
-.root.xs {
-    width: 100% !important;
-}
-.root.lg {
-    width: 50em !important;
-}
-
 .content.xs {
     width: 100% !important;
+    padding-bottom: 2em;
 }
 .content.lg {
     width: 45em !important;
+    padding-bottom: 0;
 }
 
 .text.xs {
     margin: 0 3em !important;
     font-size: 0.8em;
+}
+.text.xs .container, .text.xs .container img, .text.xs .container h1 {
+    width: 50px;
+    height: 50px;
+}
+.text.md .container, .text.md .container img, .text.md .container h1 {
+    width: 100px;
+    height: 100px;
 }
 .text.lg {
     margin: 0 !important;
@@ -120,9 +137,8 @@ body {
     width: 29em !important;
     font-size: 1.1em;
     margin-left: auto;
-    margin-right: 2em;
-    min-height: 100%;
   }
 .content.home.lg, .content.home .text {
     font-size: 1em;
+    margin-right: 2em
 }
