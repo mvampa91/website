@@ -94,13 +94,6 @@ body {
     width: 50em !important;
 }
 
-.xs {
-    font-size: 0.9em;
-}
-.lg {
-    font-size: 1em;
-}
-
 .content.xs {
     width: 100% !important;
 }
@@ -110,18 +103,10 @@ body {
 
 .text.xs {
     margin: 0 3em !important;
+    font-size: 0.8em;
 }
 .text.lg {
     margin: 0 !important;
-}
-
-.nav.xs {
-    justify-content: center !important;
-    font-size: 0.8em;
-}
-.nav.lg {
-    justify-content: flex-end !important;
-    font-size: 1em;
 }
 
 .book-wrapper.xs {
@@ -138,6 +123,6 @@ body {
     margin-right: 2em;
     min-height: 100%;
   }
-  .content.home.lg {
+.content.home.lg, .content.home .text {
     font-size: 1em;
-  }
+}

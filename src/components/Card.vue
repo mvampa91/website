@@ -181,7 +181,7 @@ export default {
 }
 .abstract-enter-from,
 .abstract-leave-to {
-  margin-top: -50%;
+  margin-top: -100%;
   opacity: 0;
 }
 .abstract-enter-active {
