@@ -3,7 +3,11 @@
     <Navbar :routes="routes" :grid="grid" />
   </transition>
   <router-view v-slot="{ Component, route }">
-    <Bookmark :grid="grid" :display="route.name === 'Home'" :showBookmark="showBookmark" />
+    <Bookmark
+      :grid="grid"
+      :display="route.name === 'Home'"
+      :showBookmark="showBookmark"
+    />
     <transition
       name="route"
       mode="out-in"
@@ -12,7 +16,8 @@
       @after-leave="show = false"
       @before-leave="toggleBookmark(route)"
     >
-      <component :is="Component" :show="show" :db="db" :grid="grid"> </component>
+      <component :is="Component" :show="show" :db="db" :grid="grid">
+      </component>
     </transition>
   </router-view>
   <Footer />
@@ -25,19 +30,20 @@ import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import { routes } from "./router";
 import db from "./store/db.json";
-import { useGrid } from 'vue-screen'
+import { useGrid } from "vue-screen";
 
 export default {
   setup() {
     const show = ref(null);
     const showBookmark = ref(null);
 
-    const breakpoints = useGrid('bootstrap')
+    const breakpoints = useGrid("bootstrap");
 
     const grid = computed(() => {
-        return Object.keys(breakpoints).filter(key => breakpoints[key] === true).join(' ')
-      }
-    )
+      return Object.keys(breakpoints)
+        .filter((key) => breakpoints[key] === true)
+        .join(" ");
+    });
 
     const toggleBookmark = (route) => {
       if (route.name !== "Home") {
