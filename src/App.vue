@@ -1,12 +1,19 @@
 <template>
   <transition name="header" appear>
-    <Navbar :routes="routes" :grid="grid" :display="showBookmark" />
+    <Navbar
+      :routes="routes"
+      :profile="profile"
+      :grid="grid"
+      :display="showBookmark"
+      :handleClick="toggleProfile"
+    />
   </transition>
   <router-view v-slot="{ Component, route }">
     <Bookmark
       :grid="grid"
       :display="route.name === 'Home'"
       :showBookmark="showBookmark"
+      :profile="profile"
     />
     <transition
       name="route"
@@ -36,6 +43,7 @@ export default {
   setup() {
     const show = ref(null);
     const showBookmark = ref(null);
+    const profile = ref(null);
 
     const breakpoints = useGrid("bootstrap");
 
@@ -53,7 +61,20 @@ export default {
       }
     };
 
-    return { show, routes, toggleBookmark, showBookmark, db, grid };
+    const toggleProfile = () => {
+      profile.value = !profile.value;
+    };
+
+    return {
+      show,
+      routes,
+      toggleBookmark,
+      showBookmark,
+      db,
+      grid,
+      toggleProfile,
+      profile,
+    };
   },
   components: {
     Bookmark,

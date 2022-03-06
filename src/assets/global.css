@@ -45,11 +45,13 @@ body {
     position: fixed;
 }
 
-.header-enter-from {
+.header-enter-from,
+.header-leave-to {
     transform: translateY(-200px);
     opacity: 0;
 }
-.header-enter-active {
+.header-enter-active,
+.header-leave-active {
     transition: all 1s ease;
 }
 
@@ -124,13 +126,6 @@ body {
 }
 .text.lg {
     margin: 0 !important;
-}
-
-.book-wrapper.xs {
-    display: none !important;
-}
-.book-wrapper.md {
-    display: block !important;
 }
 
 .content.home.md {

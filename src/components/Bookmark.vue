@@ -1,46 +1,57 @@
 <template>
-  <div v-if="!hide || display" :class="'book-wrapper ' + grid">
-    <transition
-      name="book"
-      appear
-      @before-enter="hide = false"
-      @after-enter="show = true"
-      @after-leave="hide = true"
+  <transition
+    name="book"
+    appear
+    @before-enter="hide = false"
+    @after-enter="show = true"
+    @after-leave="hide = true"
+  >
+    <div
+      v-if="(!hide || display) && (grid.includes('md') || profile)"
+      :class="'book-wrapper ' + grid + (profile ? ' profile' : '')"
     >
-      <div v-if="showBookmark" class="bookmark">
-        <transition-group name="image">
-          <img
-            v-if="show && showBookmark"
-            src="../assets/1520700434266.jpeg"
-            alt="pic"
-          />
-          <div v-if="show && showBookmark" class="skills">
-            <h2>Technical Skills</h2>
-            <div v-if="show && showBookmark" class="list">
-              <p v-for="(skill, index) in skills" :key="index">{{ skill }}</p>
+      <transition
+        name="book"
+        appear
+        @before-enter="hide = false"
+        @after-enter="show = true"
+        @after-leave="hide = true"
+      >
+        <div v-if="showBookmark" class="bookmark">
+          <transition-group name="image">
+            <img
+              v-if="show && showBookmark"
+              src="../assets/1520700434266.jpeg"
+              alt="pic"
+            />
+            <div v-if="show && showBookmark" class="skills">
+              <h2>Technical Skills</h2>
+              <div v-if="show && showBookmark" class="list">
+                <p v-for="(skill, index) in skills" :key="index">{{ skill }}</p>
+              </div>
             </div>
-          </div>
-          <div v-if="show && showBookmark" class="skills">
-            <h2>Languages</h2>
-            <div v-if="show && showBookmark" class="list">
-              <p
-                v-for="(lang, index) in languages"
-                :key="index"
-                v-html="lang"
-              />
+            <div v-if="show && showBookmark" class="skills">
+              <h2>Languages</h2>
+              <div v-if="show && showBookmark" class="list">
+                <p
+                  v-for="(lang, index) in languages"
+                  :key="index"
+                  v-html="lang"
+                />
+              </div>
             </div>
-          </div>
-        </transition-group>
-      </div>
-    </transition>
-  </div>
+          </transition-group>
+        </div>
+      </transition>
+    </div>
+  </transition>
 </template>
 
 <script>
 import { ref } from "@vue/reactivity";
 
 export default {
-  props: ["showBookmark", "display", "grid"],
+  props: ["showBookmark", "display", "grid", "profile"],
   setup(props) {
     const show = ref(null);
     const hide = ref(!props.display);
@@ -131,5 +142,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 0 2em;
+}
+.profile {
+  display: block !important;
 }
 </style>
