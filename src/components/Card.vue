@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :style="cssProps">
+  <div class="card" :style="cssProps" @click="expanded = !expanded">
     <div class="body">
       <div class="head">
         <div class="container">
@@ -18,7 +18,7 @@
           <h2>{{ subtitle }}</h2>
           <h3 v-if="from">{{ from }} - {{ to }}</h3>
         </div>
-        <span class="expand-button" v-if="expand" @click="expanded = !expanded">
+        <span class="expand-button" v-if="expand">
           <svg
             class="expand-button__svg"
             :class="{
@@ -106,6 +106,7 @@ export default {
   border-radius: 20px;
   box-shadow: 0 5px 5px #ddd;
   margin: var(--margin);
+  cursor: pointer;
 }
 .container img,
 .container h1 {
