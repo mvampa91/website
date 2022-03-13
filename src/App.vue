@@ -14,6 +14,7 @@
       :display="route.name === 'Home'"
       :showBookmark="showBookmark"
       :profile="profile"
+      :handleClick="toggleProfile"
     />
     <transition
       name="route"

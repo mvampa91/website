@@ -43,6 +43,7 @@
           </transition-group>
         </div>
       </transition>
+      <div v-if="!grid.includes('md')" class="overlay" @click="handleClick" />
     </div>
   </transition>
 </template>
@@ -51,7 +52,7 @@
 import { ref } from "@vue/reactivity";
 
 export default {
-  props: ["showBookmark", "display", "grid", "profile"],
+  props: ["showBookmark", "display", "grid", "profile", "handleClick"],
   setup(props) {
     const show = ref(null);
     const hide = ref(!props.display);
@@ -95,7 +96,7 @@ export default {
   position: absolute;
   background-color: white;
   top: 0;
-  z-index: -1;
+  z-index: 1;
   box-shadow: 0px 5px 10px #0006;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   overflow: auto;
@@ -145,5 +146,12 @@ export default {
 }
 .profile {
   display: block !important;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
 }
 </style>
