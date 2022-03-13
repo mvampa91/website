@@ -105,6 +105,9 @@ body {
 .content.xs {
     width: 100% !important;
     padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .content.lg {
     width: 45em !important;
