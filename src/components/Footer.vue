@@ -37,7 +37,7 @@ export default {
   transform: translateY(100px);
 }
 .footer-enter-active {
-  transition: all 1s ease;
+  transition: all 2s ease;
 }
 .foot.xs {
   font-size: 0.7em;

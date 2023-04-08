@@ -28,56 +28,51 @@ body {
 
 .route-enter-from {
     opacity: 0;
-    transform: translateX(-100px);
   }
 .route-leave-to {
     opacity: 0;
-    transform: translateX(100px);
 }
 .route-enter-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     position: fixed;
 }
 
 .route-leave-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     position: fixed;
 }
 
 .header-enter-from,
 .header-leave-to {
-    transform: translateY(-200px);
     opacity: 0;
 }
 .header-enter-active,
 .header-leave-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .title-enter-from {
     opacity: 0;
-    transform: translateY(30px);
 }
 .title-enter-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .image-enter-from {
     opacity: 0;
 }
 .image-enter-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .book-enter-from,
 .book-leave-to {
-    transform: translateY(800px);
     opacity: 0;
     box-shadow: none;
   }
 .book-enter-active,
 .book-leave-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .page-title {
@@ -99,7 +94,7 @@ body {
 }
 .nav-enter-active,
 .nav-leave-active {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .content.xs {

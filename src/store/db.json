@@ -2,7 +2,7 @@
     "studies": [
         {
           "src": "unipv.jpeg",
-          "title": "Univerdity of Pavia, Pavia (Italy)",
+          "title": "University of Pavia, Pavia (Italy)",
           "description":
             "Bachelor's Degree in Computer Engineering. <br> <ul> <li> Conducted an undergraduate internship with a research activity on the application of Function Point Analysis in Agile environments, focused on the <em>SAFe</em> framework. </li> </ul>",
           "from": "Oct 2010",
@@ -12,7 +12,7 @@
         },
         {
           "src": "logo1.gif",
-          "title": "Technical Institute 'G. Cardano', Pavia (Italy)",
+          "title": "Technical Institute \"G. Cardano\", Pavia (Italy)",
           "description":
             "Industrial expert crew chief spec. Industrial Computing (Abacus project).",
           "from": "Sep 2005",
@@ -24,14 +24,14 @@
       "texts": [
         "I am a computer science engineer with passion and experience in the frontend development world.",
         "In the past, I've worked in both business and technical sides of the IT industry.",
-        "In my spare time I express my creativity through electronic music production and I enjoy geeking about new technologies and video games."
+        "In my spare time I express my creativity through electronic music production and  and by geeking about new technologies and video games."
       ],
       "experiences": [
         {
           "src": "1512887861233723.png",
           "title": "SORINT.lab",
           "description":
-            "Development and maintenance of a client for an internal management application, built on a microservices backend infrastructure. The client consists of a VueJS/Vuex project supported by the Vuetify material ui library: <br> <ul> <li> development of a framework for the global look&feel management </li> <li> development of various frontend components using custom and open source libraries",
+            "<strong> Apr 2022 - present </strong> <br> For a stock exchange company client, support in the development of various frontend application for the company listing portal. The tech stack used includes ReactJS with Typescript, Redux Toolkit and Material UI. <br> <br> <strong> Nov 2021 - Mar 2022 </strong> <br> Development of a frontend application for an internal agile management portal, built on a microservices backend infrastructure. The tech stack used includes VueJS/Vuex with the support of the Vuetify material UI library.",
           "from": "Nov 2021",
           "subtitle": "Frontend Developer Expert",
           "to": "present",
@@ -41,7 +41,7 @@
           "src": "1519896099915.jpeg",
           "title": "FacilityLive",
           "description":
-            "Member of the Frontend team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. <br> <ul> <li> Evolutive maintenance of the ReactJS/Redux/NodeJS stack frontend framework, organised in a 500+ npm modules repository. </li> <li> Development of the browser testing framework, based on TestCafè. </li> <li> Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions. </li> </ul>",
+            "Member of the Frontend team, responsible for building the FacilityLive product configurator app, by creating advanced React components and integrating them with all the platform's microservices. Other topics: <br> <ul> <li> Evolutive maintenance of the frontend framework based on ReactJS/Redux/NodeJS and organised in a 500+ npm modules repository. </li> <li> Development of the browser testing framework, based on TestCafè. </li> <li> Daily close interactions with UI/UX designers, analysts, QA and BE developers to define end to end solutions. </li> </ul>",
           "from": "Mar 2018",
           "subtitle": "Frontend Developer",
           "to": "Nov 2021",
@@ -51,7 +51,7 @@
           "src": "1625468809817.jpeg",
           "title": "BIP Consulting",
           "description":
-            "Function Point Counter in a major italian telco company (WindTre): <br> <ul> <li> Measurement of the System Integrator productivity through the application of Function Point Analysis, using the Gartner FFPA methodology. </li> <li> Data governance, negotiation and cost monitoring in the end to end process of productivity measurement. </li> </ul>",
+            "Function Point Counter in a major italian telco company. Main activities: <br> <ul> <li> Measurement of the System Integrator productivity through the application of Function Point Analysis, using the Gartner FFPA methodology. </li> <li> Data governance, negotiation and cost monitoring in the end to end process of productivity measurement. </li> </ul>",
           "from": "Feb 2016",
           "subtitle": "Business Analyst",
           "to": "Feb 20218",
