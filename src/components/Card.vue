@@ -89,11 +89,7 @@ export default {
       };
     });
 
-    const handleClick = () => {
-      console.log("click");
-    };
-
-    return { abstract, cssProps, expanded, handleClick };
+    return { abstract, cssProps, expanded };
   },
 };
 </script>
