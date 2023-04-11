@@ -59,8 +59,8 @@ export default {
     const skills = ref([
       "ReactJS",
       "Redux",
-      "Javascript ES6+",
-      "Typescript",
+      "JavaScript ES6+",
+      "TypeScript",
       "VueJS",
       "Vuex",
       "Vuetify",
